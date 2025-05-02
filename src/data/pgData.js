@@ -1,0 +1,167 @@
+export const pgData = [
+  {
+    id: 1,
+    name: 'Sunshine PG',
+    rent: '₹8,000',
+    services: ['AC', 'WiFi', 'Laundry', 'Food'],
+    location: 'Mumbai',
+    image: {
+      uri: 'https://websiteupload.s3.ap-south-1.amazonaws.com/2024/05/pg-in-mumbai.jpg',
+    },
+    noAdvance: true,
+  },
+  {
+    id: 2,
+    name: 'Green Valley PG',
+    rent: '₹6,500',
+    services: ['Non-AC', 'WiFi', 'Laundry'],
+    location: 'Chennai',
+    image: {
+      uri: 'https://images.nobroker.in/images/8a9fe18285e1f2270185e231e6292381/8a9fe18285e1f2270185e231e6292381_63783_478741_medium.jpg',
+    },
+    noAdvance: false,
+  },
+  {
+    id: 3,
+    name: 'Cosy Rooms PG',
+    rent: '₹9,000',
+    location: 'Mumbai',
+    services: ['AC', 'WiFi', 'Food', 'Light Backup'],
+    image: {
+      uri: 'https://5.imimg.com/data5/ANDROID/Default/2022/5/NR/DL/EE/42979935/product-jpeg-1000x1000.jpg',
+    },
+    noAdvance: true,
+  },
+  {
+    id: 4,
+    name: 'Royal Stay PG',
+    rent: '₹7,500',
+    services: ['AC', 'WiFi', 'Laundry', 'Food', 'Light Backup'],
+    location: 'Chandigarh',
+    image: {
+      uri: 'https://images.nobroker.in/images/8a9fcc82810f457601810faa8428521b/8a9fcc82810f457601810faa8428521b_17558_515298_medium.jpg',
+    },
+    noAdvance: false,
+  },
+  {
+    id: 5,
+    name: 'Student Hub PG',
+    rent: '₹5,500',
+    services: ['Non-AC', 'WiFi', 'Laundry'],
+    location: 'Zirakpur',
+    image: {
+      uri: 'https://websiteupload.s3.ap-south-1.amazonaws.com/2024/05/pg-in-mumbai.jpg',
+    },
+    noAdvance: true,
+  },
+  {
+    id: 6,
+    name: 'Metro Living PG',
+    rent: '₹8,500',
+    services: ['AC', 'WiFi', 'Food', 'Light Backup'],
+    location: 'Pune',
+    image: {
+      uri: 'https://images.nobroker.in/images/8a9f9a828175a01c018175c2ad791928/8a9f9a828175a01c018175c2ad791928_37804_353881_medium.jpg',
+    },
+    noAdvance: true,
+  },
+  {
+    id: 7,
+    name: 'City Nest PG',
+    rent: '₹7,000',
+    services: ['Non-AC', 'WiFi', 'Laundry'],
+    location: 'Hyderabad',
+    image: {
+      uri: 'https://images.nobroker.in/images/8a9f85c48fa074fe018fa0a638f11634/8a9f85c48fa074fe018fa0a638f11634_39588_563756_medium.jpg',
+    },
+    noAdvance: false,
+  },
+  {
+    id: 8,
+    name: 'Premium Stay PG',
+    rent: '₹10,000',
+    services: ['AC', 'WiFi', 'Laundry', 'Food', 'Light Backup'],
+    location: 'Bangalore',
+    image: {
+      uri: 'https://images.nobroker.in/images/8a9fb983953c59a101953ca2e4561a8f/8a9fb983953c59a101953ca2e4561a8f_97391_534484_medium.jpg',
+    },
+    noAdvance: true,
+  },
+  {
+    id: 9,
+    name: 'Comfort Zone PG',
+    rent: '₹6,000',
+    location: 'Pune',
+    services: ['Non-AC', 'WiFi'],
+    image: {
+      uri: 'https://images.nobroker.in/images/8a9faa838bf50fb7018bf59828234765/8a9faa838bf50fb7018bf59828234765_80303_786270_medium.jpg',
+    },
+    noAdvance: false,
+  },
+  {
+    id: 10,
+    name: 'Urban Living PG',
+    rent: '₹9,500',
+    services: ['AC', 'WiFi', 'Laundry', 'Food'],
+    location: 'Delhi',
+    image: {
+      uri: 'https://images.nobroker.in/images/8a9f88c38d68e230018d69d78a423bec/8a9f88c38d68e230018d69d78a423bec_12232_40672_medium.jpg',
+    },
+    noAdvance: true,
+  },
+  {
+    id: 11,
+    name: 'Budget Stay PG',
+    rent: '₹5,000',
+    services: ['Non-AC', 'Laundry'],
+    location: 'Bangalore',
+    image: {
+      uri: 'https://images.nobroker.in/images/8a9fbd827e68c7fe017e691c68591674/8a9fbd827e68c7fe017e691c68591674_77811_590194_medium.jpg',
+    },
+    noAdvance: false,
+  },
+  {
+    id: 12,
+    name: 'Elite Rooms PG',
+    rent: '₹11,000',
+    location: 'Pune',
+    services: ['AC', 'WiFi', 'Laundry', 'Food', 'Light Backup'],
+    image: {
+      uri: 'https://images.nobroker.in/images/8a9f918395c8aea30195c8c57ff30561/8a9f918395c8aea30195c8c57ff30561_125052_124697_medium.jpg',
+    },
+    noAdvance: false,
+  },
+  {
+    id: 13,
+    name: 'Friendly PG',
+    rent: '₹6,800',
+    services: ['Non-AC', 'WiFi', 'Food'],
+    location: 'Delhi',
+    image: {
+      uri: 'https://images.nobroker.in/images/8a9fcc82810f457601810faa8428521b/8a9fcc82810f457601810faa8428521b_17558_515298_medium.jpg',
+    },
+    noAdvance: false,
+  },
+  {
+    id: 14,
+    name: 'Homely PG',
+    rent: '₹7,200',
+    location: 'Gurugram',
+    services: ['AC', 'WiFi', 'Laundry'],
+    image: {
+      uri: 'https://images.nobroker.in/images/8a9fbc83955ff87101956069abf22e71/8a9fbc83955ff87101956069abf22e71_90942_427523_medium.jpg',
+    },
+    noAdvance: false,
+  },
+  {
+    id: 15,
+    name: 'Nomad Ladies PG',
+    rent: '₹12,000',
+    location: 'Chennai',
+    services: ['AC', 'WiFi', 'Laundry', 'Food', 'Light Backup', 'Gym'],
+    image: {
+      uri: 'https://wakeuphostels.in/wp-content/uploads/elementor/thumbs/front-nomads-ladies-pg-jayanagar-2-pcbgxde44vojw3nkf3xfqrr7qs87nxpp7l3nkapzy0.jpeg',
+    },
+    noAdvance: true,
+  },
+];
