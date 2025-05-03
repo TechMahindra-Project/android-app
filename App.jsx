@@ -1,8 +1,5 @@
-// App.js
-import {StyleSheet, Text, View} from 'react-native';
 import React, { useContext } from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from './src/screens/Home';
 import Profile from './src/screens/Profile';
 import Search from './src/screens/Search';
@@ -17,19 +14,6 @@ import MyPG from './src/screens/MyPG';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const Tab = createBottomTabNavigator();
-const Stack = createNativeStackNavigator();
-
-const StackNavigator = () => {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Profile" component={Profile} />
-      <Stack.Screen name="Search" component={Search} />
-      <Stack.Screen name="Loan" component={Loan} />
-      <Stack.Screen name="MyPG" component={MyPG} />
-    </Stack.Navigator>
-  );
-};
 
 const TabNavigator = () => {
   const theme = useContext(ThemeContext);
@@ -118,5 +102,3 @@ const App = () => {
 };
 
 export default App;
-
-const styles = StyleSheet.create({});

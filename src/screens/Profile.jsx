@@ -16,6 +16,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const Profile = ({navigation}) => {
   const theme = useContext(ThemeContext);
+  const [loanStatus, setLoanStatus] = React.useState('not taken yet'); // 'pending', 'completed', or 'not taken yet'
 
   // Dynamic colors
   const iconBackground = theme.isDarkMode
@@ -82,7 +83,11 @@ const Profile = ({navigation}) => {
           style={[
             styles.premiumBanner,
             cardShadow,
-            {backgroundColor: theme.isDarkMode ? 'rgba(255, 215, 0, 0.7)' : '#FFD700'},
+            {
+              backgroundColor: theme.isDarkMode
+                ? 'rgba(255, 215, 0, 0.7)'
+                : '#FFD700',
+            },
           ]}
           onPress={() => Alert.alert('Premium', 'Unlock exclusive features!')}>
           <View style={styles.premiumContent}>
@@ -151,26 +156,86 @@ const Profile = ({navigation}) => {
           </View>
         </View>
 
-        {/* Money Section */}
-        <View
+
+        {/* Loan Section */}
+        <TouchableOpacity
           style={[
             styles.cardContainer,
             {backgroundColor: theme.colors.card},
             cardShadow,
-          ]}>
+          ]}
+          onPress={() => {
+            // Optional: Cycle through statuses on press (for demo)
+            const nextStatus =
+              loanStatus === 'not taken yet'
+                ? 'pending'
+                : loanStatus === 'pending'
+                ? 'completed'
+                : 'not taken yet';
+            setLoanStatus(nextStatus);
+          }}>
           <View style={styles.iconTextContainer}>
             <View
-              style={[styles.iconCircle, {backgroundColor: iconBackground}]}>
-              <FontAwesome name="rupee" size={20} color={theme.colors.text} />
+              style={[
+                styles.iconCircle,
+                {
+                  backgroundColor:
+                    loanStatus === 'pending'
+                      ? 'rgba(255, 193, 7, 0.2)'
+                      : loanStatus === 'completed'
+                      ? 'rgba(40, 167, 69, 0.2)'
+                      : 'rgba(108, 117, 125, 0.2)',
+                },
+              ]}>
+              <FontAwesome
+                name={
+                  loanStatus === 'pending'
+                    ? 'hourglass-half'
+                    : loanStatus === 'completed'
+                    ? 'check-circle'
+                    : 'info-circle'
+                }
+                size={20}
+                color={
+                  loanStatus === 'pending'
+                    ? '#FFC107'
+                    : loanStatus === 'completed'
+                    ? '#28A745'
+                    : '#6C757D'
+                }
+              />
             </View>
             <Text style={[styles.cardText, {color: theme.colors.text}]}>
-              Balance
+              Loan Status
             </Text>
           </View>
-          <Text style={[styles.amountText, {color: theme.colors.text}]}>
-            ₹0
-          </Text>
-        </View>
+          <View style={styles.statusBadge}>
+            <Text
+              style={[
+                styles.statusBadgeText,
+                {
+                  color:
+                    loanStatus === 'pending'
+                      ? '#856404'
+                      : loanStatus === 'completed'
+                      ? '#155724'
+                      : '#383D41',
+                  backgroundColor:
+                    loanStatus === 'pending'
+                      ? 'rgba(255, 193, 7, 0.9)'
+                      : loanStatus === 'completed'
+                      ? 'rgba(40, 167, 69, 0.9)'
+                      : 'rgba(206, 212, 218, 0.9)',
+                },
+              ]}>
+              {loanStatus === 'pending'
+                ? 'Pending'
+                : loanStatus === 'completed'
+                ? 'Completed'
+                : 'Not Taken Yet'}
+            </Text>
+          </View>
+        </TouchableOpacity>
 
         {/* Saved Section */}
         <View
@@ -219,7 +284,7 @@ const Profile = ({navigation}) => {
             </Text>
           </View>
           <View style={styles.referralBadge}>
-            <Text style={styles.referralBadgeText}>Earn upto ₹100</Text>
+            <Text style={styles.referralBadgeText}>Earn upto ₹200</Text>
           </View>
         </TouchableOpacity>
 
@@ -372,6 +437,13 @@ const styles = StyleSheet.create({
   actionText: {
     fontSize: 16,
     fontWeight: '500',
+  },
+  statusBadgeText: {
+    fontSize: 12,
+    fontWeight: '700',
+    borderRadius: 12,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
   },
   referralBadge: {
     backgroundColor: '#4CAF50',

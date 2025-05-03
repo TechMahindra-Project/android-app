@@ -9,6 +9,7 @@ export const pgData = [
       uri: 'https://websiteupload.s3.ap-south-1.amazonaws.com/2024/05/pg-in-mumbai.jpg',
     },
     noAdvance: true,
+    isAvailable:true,
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const pgData = [
       uri: 'https://images.nobroker.in/images/8a9fe18285e1f2270185e231e6292381/8a9fe18285e1f2270185e231e6292381_63783_478741_medium.jpg',
     },
     noAdvance: false,
+    isAvailable:true,
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ export const pgData = [
       uri: 'https://5.imimg.com/data5/ANDROID/Default/2022/5/NR/DL/EE/42979935/product-jpeg-1000x1000.jpg',
     },
     noAdvance: true,
+    isAvailable:true,
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ export const pgData = [
       uri: 'https://images.nobroker.in/images/8a9fcc82810f457601810faa8428521b/8a9fcc82810f457601810faa8428521b_17558_515298_medium.jpg',
     },
     noAdvance: false,
+    isAvailable:true,
   },
   {
     id: 5,
@@ -53,6 +57,7 @@ export const pgData = [
       uri: 'https://websiteupload.s3.ap-south-1.amazonaws.com/2024/05/pg-in-mumbai.jpg',
     },
     noAdvance: true,
+    isAvailable:true,
   },
   {
     id: 6,
@@ -64,6 +69,7 @@ export const pgData = [
       uri: 'https://images.nobroker.in/images/8a9f9a828175a01c018175c2ad791928/8a9f9a828175a01c018175c2ad791928_37804_353881_medium.jpg',
     },
     noAdvance: true,
+    isAvailable:false,
   },
   {
     id: 7,
@@ -75,6 +81,7 @@ export const pgData = [
       uri: 'https://images.nobroker.in/images/8a9f85c48fa074fe018fa0a638f11634/8a9f85c48fa074fe018fa0a638f11634_39588_563756_medium.jpg',
     },
     noAdvance: false,
+    isAvailable:false,
   },
   {
     id: 8,
@@ -86,6 +93,7 @@ export const pgData = [
       uri: 'https://images.nobroker.in/images/8a9fb983953c59a101953ca2e4561a8f/8a9fb983953c59a101953ca2e4561a8f_97391_534484_medium.jpg',
     },
     noAdvance: true,
+    isAvailable:true,
   },
   {
     id: 9,
@@ -97,6 +105,7 @@ export const pgData = [
       uri: 'https://images.nobroker.in/images/8a9faa838bf50fb7018bf59828234765/8a9faa838bf50fb7018bf59828234765_80303_786270_medium.jpg',
     },
     noAdvance: false,
+    isAvailable:true,
   },
   {
     id: 10,
@@ -108,6 +117,7 @@ export const pgData = [
       uri: 'https://images.nobroker.in/images/8a9f88c38d68e230018d69d78a423bec/8a9f88c38d68e230018d69d78a423bec_12232_40672_medium.jpg',
     },
     noAdvance: true,
+    isAvailable:true,
   },
   {
     id: 11,
@@ -119,6 +129,7 @@ export const pgData = [
       uri: 'https://images.nobroker.in/images/8a9fbd827e68c7fe017e691c68591674/8a9fbd827e68c7fe017e691c68591674_77811_590194_medium.jpg',
     },
     noAdvance: false,
+    isAvailable:false,
   },
   {
     id: 12,
@@ -130,6 +141,7 @@ export const pgData = [
       uri: 'https://images.nobroker.in/images/8a9f918395c8aea30195c8c57ff30561/8a9f918395c8aea30195c8c57ff30561_125052_124697_medium.jpg',
     },
     noAdvance: false,
+    isAvailable:false,
   },
   {
     id: 13,
@@ -141,6 +153,7 @@ export const pgData = [
       uri: 'https://images.nobroker.in/images/8a9fcc82810f457601810faa8428521b/8a9fcc82810f457601810faa8428521b_17558_515298_medium.jpg',
     },
     noAdvance: false,
+    isAvailable:true,
   },
   {
     id: 14,
@@ -152,6 +165,7 @@ export const pgData = [
       uri: 'https://images.nobroker.in/images/8a9fbc83955ff87101956069abf22e71/8a9fbc83955ff87101956069abf22e71_90942_427523_medium.jpg',
     },
     noAdvance: false,
+    isAvailable:true,
   },
   {
     id: 15,
@@ -163,5 +177,6 @@ export const pgData = [
       uri: 'https://wakeuphostels.in/wp-content/uploads/elementor/thumbs/front-nomads-ladies-pg-jayanagar-2-pcbgxde44vojw3nkf3xfqrr7qs87nxpp7l3nkapzy0.jpeg',
     },
     noAdvance: true,
+    isAvailable:false,
   },
 ];

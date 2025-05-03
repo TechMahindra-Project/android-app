@@ -51,8 +51,13 @@ const Home = ({navigation}) => {
 
   const renderItem = ({item}) => (
     <TouchableOpacity
-      style={[styles.pgCard, {backgroundColor: theme.colors.card}]}>
-      <Image source={item.image} style={styles.pgImage} />
+      style={[styles.pgCard, {backgroundColor: theme.colors.card, opacity: item.isAvailable ? 1 : 0.6}]} disabled={!item.isAvailable}>
+        {!item.isAvailable && (
+      <View style={styles.unavailableOverlay}>
+        <Text style={styles.unavailableText}>Currently unavailable</Text>
+      </View>
+    )}
+      <Image source={item.image} style={[styles.pgImage, !item.isAvailable && styles.pgImage]} />
       <View style={styles.pgInfo}>
         <View style={styles.pgHeader}>
           <View style={styles.nameLocationContainer}>
@@ -255,6 +260,22 @@ const styles = StyleSheet.create({
     marginTop: 16,
     fontSize: 16,
     color: '#9CA3AF',
+  },
+  unavailableOverlay: {
+    position: 'absolute',
+    top: 10,
+    right: 10,
+    backgroundColor: 'rgba(0,0,0,0.8)',
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 20,
+    zIndex: 2,
+    elevation: 3,
+  },
+  unavailableText: {
+    color: 'white',
+    fontSize: 10,
+    fontWeight: 'bold',
   },
 });
 
