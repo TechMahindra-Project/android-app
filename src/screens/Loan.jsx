@@ -14,7 +14,6 @@ import React, {useContext, useState, useEffect} from 'react';
 import {ThemeContext} from '../context/ThemeContext';
 import {Slider} from '@miblanchard/react-native-slider';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 const Loan = ({navigation}) => {
@@ -340,13 +339,20 @@ const Loan = ({navigation}) => {
             </Text>
           </View>
 
-          <Text style={[styles.note, {color: theme.colors.text}]}>
+          <Text style={[styles.note, {color: theme.colors.text, fontSize: 11}]}>
             <MaterialCommunityIcons
               name="alert-circle-outline"
-              size={16}
+              size={10}
               color={theme.colors.text}
             />{' '}
-            By applying, you agree to our Terms of Service and Privacy Policy
+            By applying, you agree to our{' '}
+            <Text style={{textDecorationLine: 'underline'}}>
+              Terms of Service
+            </Text>{' '}
+            and{' '}
+            <Text style={{textDecorationLine: 'underline'}}>
+              Privacy Policy
+            </Text>
           </Text>
 
           <TouchableOpacity

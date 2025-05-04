@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "852310352737",
-    "project_id": "findpg-39841",
-    "storage_bucket": "findpg-39841.firebasestorage.app"
+    "project_number": "940016405026",
+    "project_id": "findpg-94aa3",
+    "storage_bucket": "findpg-94aa3.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:852310352737:android:768f9c6bc07c762f089b20",
+        "mobilesdk_app_id": "1:940016405026:android:a49b14662be5985ac0987b",
         "android_client_info": {
-          "package_name": "com.awesomeprojectpg"
+          "package_name": "com.awesomeproject"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCc_qfJ2qVMTaoI_C5uWiPXwAcaCVLj9gY"
+          "current_key": "AIzaSyDkULPkMHlrpF6zLAivfiL_f_HfFHyk98U"
         }
       ],
       "services": {

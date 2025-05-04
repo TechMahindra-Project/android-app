@@ -6,8 +6,9 @@ import {
   TouchableOpacity,
   Alert,
   ScrollView,
+  ActivityIndicator,
 } from 'react-native';
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {ThemeContext} from '../context/ThemeContext';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -16,9 +17,10 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const Profile = ({navigation}) => {
   const theme = useContext(ThemeContext);
-  const [loanStatus, setLoanStatus] = React.useState('not taken yet'); // 'pending', 'completed', or 'not taken yet'
+  const [loanStatus, setLoanStatus] = useState('not taken yet');
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggingOut, setIsLoggingOut] = useState(false); // New state for logout loading
 
-  // Dynamic colors
   const iconBackground = theme.isDarkMode
     ? 'rgba(255, 255, 255, 0.1)'
     : 'rgba(0, 0, 0, 0.05)';
@@ -41,7 +43,6 @@ const Profile = ({navigation}) => {
         {
           text: 'Copy',
           onPress: () => {
-            // Implement copy to clipboard functionality
             Alert.alert('Copied', 'Your referral code has been copied!');
           },
         },
@@ -52,6 +53,62 @@ const Profile = ({navigation}) => {
       ],
     );
   };
+
+  const handleLogout = () => {
+    Alert.alert('Logout', 'Are you sure?', [
+      {text: 'Cancel', style: 'cancel'},
+      {
+        text: 'Logout',
+        onPress: () => {
+          setIsLoggingOut(true); // Show loading indicator
+          
+          // Simulate logout process for 3 seconds
+          setTimeout(() => {
+            setIsLoggedIn(false);
+            setIsLoggingOut(false);
+            // Alert.alert('Logged out successfully');
+          }, 3000);
+        },
+      },
+    ]);
+  };
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+    Alert.alert('Welcome back!');
+  };
+
+  if (isLoggingOut) {
+    return (
+      <View style={[styles.loadingContainer, {backgroundColor: theme.colors.background}]}>
+        <ActivityIndicator size="large" color={theme.colors.primary || '#4a6bff'} />
+        <Text style={[styles.loadingText, {color: theme.colors.text}]}>Logging out...</Text>
+      </View>
+    );
+  }
+
+  if (!isLoggedIn) {
+    return (
+      <View
+        style={[
+          styles.loginContainer,
+          {backgroundColor: theme.colors.background},
+        ]}>
+        <TouchableOpacity
+          style={[
+            styles.loginButton,
+            {
+              backgroundColor: theme.colors.primary || '#4a6bff',
+              shadowColor: theme.isDarkMode ? '#000' : '#4a6bff',
+            },
+          ]}
+          onPress={handleLogin}>
+          <Ionicons name="log-in-outline" size={24} color="white" />
+          <Text style={styles.loginButtonText}>Login</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
 
   return (
     <ScrollView style={{flex: 1, backgroundColor: theme.colors.background}}>
@@ -156,7 +213,6 @@ const Profile = ({navigation}) => {
           </View>
         </View>
 
-
         {/* Loan Section */}
         <TouchableOpacity
           style={[
@@ -165,7 +221,6 @@ const Profile = ({navigation}) => {
             cardShadow,
           ]}
           onPress={() => {
-            // Optional: Cycle through statuses on press (for demo)
             const nextStatus =
               loanStatus === 'not taken yet'
                 ? 'pending'
@@ -247,11 +302,7 @@ const Profile = ({navigation}) => {
           <View style={styles.iconTextContainer}>
             <View
               style={[styles.iconCircle, {backgroundColor: iconBackground}]}>
-              <FontAwesome
-                name="bookmark"
-                size={20}
-                color={theme.colors.text}
-              />
+              <FontAwesome name="bookmark" size={20} color={theme.colors.text} />
             </View>
             <Text style={[styles.cardText, {color: theme.colors.text}]}>
               Saved Items
@@ -309,12 +360,7 @@ const Profile = ({navigation}) => {
         {/* Logout Button */}
         <TouchableOpacity
           style={[styles.actionButton, {borderColor: '#e53935'}]}
-          onPress={() =>
-            Alert.alert('Logout', 'Are you sure?', [
-              {text: 'Cancel', style: 'cancel'},
-              {text: 'Logout', onPress: () => Alert.alert('Logged out')},
-            ])
-          }>
+          onPress={handleLogout}>
           <Ionicons name="log-out-outline" size={24} color="#e53935" />
           <Text style={[styles.actionText, {color: '#e53935'}]}>Logout</Text>
         </TouchableOpacity>
@@ -327,6 +373,39 @@ const styles = StyleSheet.create({
   container: {
     padding: 16,
     gap: 12,
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 20,
+  },
+  loadingText: {
+    fontSize: 18,
+    marginTop: 20,
+  },
+  loginContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  loginButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    borderRadius: 30,
+    gap: 12,
+    shadowOffset: {width: 0, height: 4},
+    shadowOpacity: 0.3,
+    shadowRadius: 10,
+    elevation: 5,
+  },
+  loginButtonText: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: '600',
   },
   profileSection: {
     flexDirection: 'row',
@@ -456,6 +535,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: 'bold',
   },
+  
 });
 
 export default Profile;

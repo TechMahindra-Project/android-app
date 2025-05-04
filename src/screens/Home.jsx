@@ -51,10 +51,11 @@ const Home = ({navigation}) => {
 
   const renderItem = ({item}) => (
     <TouchableOpacity
-      style={[styles.pgCard, {backgroundColor: theme.colors.card, opacity: item.isAvailable ? 1 : 0.6}]} disabled={!item.isAvailable}>
+      style={[styles.pgCard, {backgroundColor: theme.colors.card, opacity: item.isAvailable ? 1 : 0.5}]} 
+      disabled={!item.isAvailable}>
         {!item.isAvailable && (
       <View style={styles.unavailableOverlay}>
-        <Text style={styles.unavailableText}>Currently unavailable</Text>
+        <Text style={styles.unavailableText}>Room Unavailable</Text>
       </View>
     )}
       <Image source={item.image} style={[styles.pgImage, !item.isAvailable && styles.pgImage]} />
