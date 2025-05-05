@@ -26,7 +26,6 @@ const Search = ({ navigation }) => {
   const renderItem = ({ item }) => (
     <TouchableOpacity 
       style={[styles.pgCard, { backgroundColor: theme.colors.card }]}
-      onPress={() => navigation.navigate('PGDetail', { pg: item })}
     >
       <Text style={[styles.pgName, { color: theme.colors.text }]}>{item.name}</Text>
       <View style={styles.locationContainer}>
