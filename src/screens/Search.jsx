@@ -13,7 +13,7 @@ const Search = ({ navigation }) => {
   const handleSearch = (text) => {
     setSearchQuery(text);
     if (text.length > 0) {
-      const filtered = pgData.filter(pg => 
+      const filtered = pgData.filter(pg =>
         pg.name.toLowerCase().includes(text.toLowerCase()) ||
         (pg.location && pg.location.toLowerCase().includes(text.toLowerCase()))
       );
@@ -24,7 +24,7 @@ const Search = ({ navigation }) => {
   };
 
   const renderItem = ({ item }) => (
-    <TouchableOpacity 
+    <TouchableOpacity
       style={[styles.pgCard, { backgroundColor: theme.colors.card }]}
     >
       <Text style={[styles.pgName, { color: theme.colors.text }]}>{item.name}</Text>
@@ -174,3 +174,4 @@ const styles = StyleSheet.create({
 });
 
 export default Search;
+

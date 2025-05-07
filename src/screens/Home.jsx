@@ -55,7 +55,7 @@ const Home = ({navigation}) => {
       disabled={!item.isAvailable}>
         {!item.isAvailable && (
       <View style={styles.unavailableOverlay}>
-        <Text style={styles.unavailableText}>Room Unavailable</Text>
+        <Text style={styles.unavailableText}> Room Unavailable</Text>
       </View>
     )}
       <Image source={item.image} style={[styles.pgImage, !item.isAvailable && styles.pgImage]} />
@@ -266,7 +266,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 10,
     right: 10,
-    backgroundColor: 'rgba(0,0,0,0.8)',
+    backgroundColor: 'rgba(255,0,0,0.7)',
     paddingHorizontal: 10,
     paddingVertical: 6,
     borderRadius: 20,
@@ -280,4 +280,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home;
+export default Home

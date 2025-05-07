@@ -7,30 +7,30 @@ const AboutUsScreen = () => {
   const theme = useContext(ThemeContext);
   
   const teamData = [
-    // {
-    //   name: 'Divyam Goel',
-    //   role: 'Founder & CEO',
-    //   bio: 'Real estate expert with 10+ years experience in property management',
-    //   image: 'https://i.pinimg.com/236x/34/5c/6d/345c6d52234bbc72407ea25d49ad945e.jpg'
-    // },
+    {
+      name: 'Divyam Goel',
+      role: 'Founder & CEO',
+      bio: 'Real estate expert with 10+ years experience in property management',
+      image: 'https://i.pinimg.com/236x/34/5c/6d/345c6d52234bbc72407ea25d49ad945e.jpg'
+    },
     {
       name: 'Ayush Singla',
       role: 'CTO',
       bio: 'Tech enthusiast specializing in scalable web platforms',
       image: 'https://i.pinimg.com/236x/d2/7a/62/d27a626a6b0f3f78eff872925f766a93.jpg'
     },
-    // {
-    //   name: 'Ayush Aggarwal',
-    //   role: 'Head of Operations',
-    //   bio: 'Customer service specialist focused on seamless PG experiences',
-    //   image: 'https://i.pinimg.com/474x/52/33/20/5233204aae9643a84ce2ca4407299c2a.jpg'
-    // },
-    // {
-    //   name: 'Keshav Singla',
-    //   role: 'Marketing Head',
-    //   bio: 'Digital marketing expert with focus on growth strategies',
-    //   image: 'https://i.pinimg.com/236x/48/65/f6/4865f65986c705dd83291e47f2c31ae0.jpg'
-    // }
+    {
+      name: 'Ayush Aggarwal',
+      role: 'Head of Operations',
+      bio: 'Customer service specialist focused on seamless PG experiences',
+      image: 'https://i.pinimg.com/474x/52/33/20/5233204aae9643a84ce2ca4407299c2a.jpg'
+    },
+    {
+      name: 'Keshav Singla',
+      role: 'Marketing Head',
+      bio: 'Digital marketing expert with focus on growth strategies',
+      image: 'https://i.pinimg.com/236x/48/65/f6/4865f65986c705dd83291e47f2c31ae0.jpg'
+    }
   ];
 
   return (

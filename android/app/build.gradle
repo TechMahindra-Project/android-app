@@ -83,6 +83,7 @@ android {
         applicationId "com.awesomeproject"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+        manifestPlaceholders = [auth0Domain: "dev-pftxcjiylw0on71u.us.auth0.com", auth0Scheme: "${applicationId}.auth0"]
         versionCode 1
         versionName "1.0"
     }
