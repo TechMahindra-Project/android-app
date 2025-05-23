@@ -83,9 +83,16 @@ android {
         applicationId "com.awesomeproject"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        manifestPlaceholders = [auth0Domain: "dev-pftxcjiylw0on71u.us.auth0.com", auth0Scheme: "${applicationId}.auth0"]
+        manifestPlaceholders = [
+            auth0Domain : "dev-pftxcjiylw0on71u.us.auth0.com",
+            auth0Scheme : "${applicationId}.auth0",
+            razorpayKey : "rzp_test_tANvftiC8cm9ph"
+        ]
         versionCode 1
         versionName "1.0"
+    }
+    aaptOptions {
+        noCompress "mp3"
     }
     signingConfigs {
         debug {
@@ -112,6 +119,8 @@ android {
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
+    implementation(platform("com.google.firebase:firebase-bom:33.14.0"))
+    implementation("com.google.firebase:firebase-analytics")
 
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")

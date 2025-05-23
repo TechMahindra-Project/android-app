@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "940016405026",
-    "project_id": "findpg-94aa3",
-    "storage_bucket": "findpg-94aa3.firebasestorage.app"
+    "project_number": "554658236020",
+    "project_id": "find-my-pg-fde6f",
+    "storage_bucket": "find-my-pg-fde6f.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:940016405026:android:a49b14662be5985ac0987b",
+        "mobilesdk_app_id": "1:554658236020:android:0a65ab278ea0b9ac20b321",
         "android_client_info": {
           "package_name": "com.awesomeproject"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDkULPkMHlrpF6zLAivfiL_f_HfFHyk98U"
+          "current_key": "AIzaSyC90RBErubGHL8cL1SGF8BzVztwhuIRHVg"
         }
       ],
       "services": {
